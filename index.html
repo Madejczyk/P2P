@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="grid">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Palanquin' rel='stylesheet' type='text/css'>
+        <title>Peer-to-peer file sharing app</title>
+    </head>
+    <body>
+        <div class="navbar navbar-fixed-top" id="tableDiv">
+            <p href="/" class="navbar-brand">
+                Peer-to-Peer file sharing app
+            </p>
+<!--             <ul class="nav navbar-nav navbar-right">
+                <li ng-show="grid.canUpload"><a>Upload</a></li>
+            <ul> -->
+        </div>
+        <div ng-controller="GridController as grid" class="container">
+            <div class="row text-center">
+                <h1>Peer-to-Peer file sharing app</h1>
+            </div>
+            <div class="row" id="tableDiv">
+                <file-table></file-table>
+            </div>
+            <div class="row" id="tableDiv" ng-show="grid.selectedTab">
+                <file-panel></file-panel>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="JavaScript/angular.min.js"></script>
+        <script type="text/javascript" src="JavaScript/bootstrap.min.js"></script>
+        <script type="text/javascript" src="JavaScript/files.json"></script>
+        <script type="text/javascript" src="JavaScript/app.js"></script>
+    </body>
+</html>

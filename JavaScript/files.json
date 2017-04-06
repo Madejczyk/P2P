@@ -1,0 +1,49 @@
+var downloadFiles = [
+    {
+        id: 1,
+        name: 'Test1',
+        creationDate: '2017-04-02',
+        createdBy: 'Tester',
+        description: 'Bla bla',
+        seedersCount: 0,
+        leechersCount: 1,
+        leechers: [
+            {
+                firstName: 'Kuba'
+            }
+        ],
+        reviews: [
+            {
+                stars: 5,
+                body: "Allright",
+                author: "jma@wp.pl"
+            },
+            {
+                stars: 4,
+                body: "OK",
+                author: "kma@wp.pl"
+            }
+        ],
+        hideFile: false,
+        canDownload: true
+    },
+    {
+        id: 2,
+        name: 'Test2',
+        creationDate: '2017-04-02',
+        createdBy: 'Teste2',
+        description: 'Bla bla bla',
+        seedersCount: 2,
+        seeders: [
+            {
+                firstName: 'Jas'
+            },
+            {
+                firstName: 'Malgosia'
+            }
+        ],
+        leechersCount: 0,
+        hideFile: false,
+        canDownload: true
+    }
+    ];

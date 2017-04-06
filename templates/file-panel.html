@@ -1,0 +1,31 @@
+<div class="panel" ng-show="grid.selectedTab === 1">
+    <button ng-click="grid.selectedTab = 0" class="btn pull-right" id="buttonDef">
+        <span class="sr-only">Close</span>
+        <i class="glyphicon glyphicon-remove"></i>
+    </button>
+    <h2 class="text-center">Description:</h2>
+    <h3>{{grid.selectedFile.description}}</h3>
+</div>
+<div class="panel" ng-show="grid.selectedTab === 2">
+    <button ng-click="grid.selectedTab = 0" class="btn pull-right" id="buttonDef">
+        <span class="sr-only">Close</span>
+        <i class="glyphicon glyphicon-remove"></i>
+    </button>
+    <h2 class="text-center">Seeders: {{grid.selectedFile.seedersCount}}</h2>
+    <blockquote ng-repeat="seeder in grid.selectedFile.seeders">{{seeder.firstName}}</blockquote>
+</div>
+<div class="panel" ng-show="grid.selectedTab === 3">
+    <button ng-click="grid.selectedTab = 0" class="btn pull-right" id="buttonDef">
+        <span class="sr-only">Close</span>
+        <i class="glyphicon glyphicon-remove"></i>
+    </button>
+    <h2 class="text-center">Leechers:{{grid.selectedFile.leechersCount}}</h2>
+    <blockquote ng-repeat="leecher in grid.selectedFile.leechers">{{leecher.firstName}}</blockquote>
+</div>
+<div class="panel" ng-show="grid.selectedTab === 4">
+    <button ng-click="grid.selectedTab = 0" class="btn pull-right" id="buttonDef">
+        <span class="sr-only">Close</span>
+        <i class="glyphicon glyphicon-remove"></i>
+    </button>
+    <file-review></file-review>
+</div>

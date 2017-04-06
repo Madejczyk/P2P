@@ -1,0 +1,26 @@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+          <tr>
+            <th width="10%">#</th>
+            <th width="30%">Name</th>
+            <th width="20%">Creation</th>
+            <th width="10%">Seeders</th>
+            <th width="10%">Leechers</th>
+            <th width="10%">Comments</th>
+            <th width="10%">Download</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="file in grid.files" ng-hide="file.hideFile">
+                <td>{{file.id}}</td>
+                <td><a href ng-click="grid.sFileAndTab(file,1)">{{file.name | uppercase}}</a></td>
+                <td>{{file.creationDate}} by {{file.createdBy | uppercase}}</td>
+                <td><a href ng-click="grid.sFileAndTab(file,2)">{{file.seedersCount}}</a></td>
+                <td><a href ng-click="grid.sFileAndTab(file,3)">{{file.leechersCount}}</a></td>
+                <td><button href ng-click="grid.sFileAndTab(file,4)"class="btn" id="buttonDef">Show</button></td>
+                <td><button ng-show="file.canDownload" class="btn" id="buttonDef">Download</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

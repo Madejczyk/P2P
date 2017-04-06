@@ -1,0 +1,45 @@
+body{
+
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    padding-top: 70px;
+    background: #FCE8D4; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #FCE8D4, #B79973); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #FCE8D4, #B79973); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #FCE8D4, #B79973); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #FCE8D4, #B79973); /* Standard syntax */
+}
+h1{
+    font-family: 'Palanquin', Arial, sans-serif;
+}
+.ng-invalid.ng-dirty{
+  border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty{
+  border-color: #78FA89;
+}
+#buttonDef, .panel{
+    background: rgba(255,255,255,0.25);
+}
+
+#tableDiv{
+    border-radius: 5px;
+    background: rgba(255,255,255,0.25);
+}
+
+select, textarea, #emailArea{
+    background: rgba(255,255,255,0.25);
+    width:100%;
+}
+#selectArea *{
+    background: rgb(252, 232, 212);
+}
+
+a{
+    color:#333;
+}
+blockquote{
+  border-left: 5px solid rgba(255,255,255,0.25);
+}

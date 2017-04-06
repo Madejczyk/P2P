@@ -1,0 +1,32 @@
+<h2 class="text-center">Comments</h2>
+<div class="col-sm-8">
+    <blockquote ng-repeat="review in grid.selectedFile.reviews">
+        <b>Stars: {{review.stars}}</b>
+        {{review.body}}
+        <cite>{{review.author}}</cite>
+    </blockquote>
+</div>
+<div class="col-sm-4">
+    <form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
+        ng-submit="reviewForm.$valid && reviewCtrl.addReview(grid.selectedFile)" novalidate>
+        <blockquote>
+            <b>Stars: {{reviewCtrl.review.stars}}</b>
+            {{reviewCtrl.review.body}}
+            <cite>by: {{reviewCtrl.review.author}}</cite>
+        </blockquote>
+        <select ng-model="reviewCtrl.review.stars" required id="selectArea">
+            <option value="" disabled selected>Select your opinion</option>
+            <option value="1">1 star</option>
+            <option value="2">2 star</option>
+            <option value="3">3 star</option>
+            <option value="4">4 star</option>
+            <option value="5">5 star</option>
+        </select>
+        <br>
+        <textarea ng-model="reviewCtrl.review.body" required id="textAreaComment" placeholder="Comment"></textarea>
+        <br>
+        <input ng-model="reviewCtrl.review.author" required type="email" id="emailArea" placeholder="E-mail" />
+        <br>
+        <input type="submit" class="btn pull-right" id="buttonDef" value="Submit"/>
+    </form>
+</div>
