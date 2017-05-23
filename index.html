@@ -12,9 +12,16 @@
             <p href="/" class="navbar-brand">
                 Peer-to-Peer file sharing app
             </p>
-<!--             <ul class="nav navbar-nav navbar-right">
-                <li ng-show="grid.canUpload"><a>Upload</a></li>
-            <ul> -->
+             <ul ng-controller="GridController as grid" ng-show="grid.canUpload" class="nav navbar-nav navbar-right">
+                <li>
+                    <form id="form" action="http://example.com">
+                    <label for="file-upload" class="custom-file-upload">
+                        <i class="fa fa-cloud-upload"></i>Upload
+                    </label>
+                    <input type="file" id="file-upload" name="file">
+                    </form>
+                </li>
+            <ul>
         </div>
         <div ng-controller="GridController as grid" class="container">
             <div class="row text-center">
@@ -32,5 +39,10 @@
         <script type="text/javascript" src="JavaScript/bootstrap.min.js"></script>
         <script type="text/javascript" src="JavaScript/files.json"></script>
         <script type="text/javascript" src="JavaScript/app.js"></script>
+        <script>
+        document.getElementById("file-upload").onchange = function() {
+            document.getElementById("form").submit();
+        }
+        </script>
     </body>
 </html>
