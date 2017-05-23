@@ -25,7 +25,8 @@ var downloadFiles = [
             }
         ],
         hideFile: false,
-        canDownload: true
+        canDownload: true,
+        fileLink: "http://megaicons.net/static/img/icons_sizes/316/812/512/text-x-python-icon.png"
     },
     {
         id: 2,
@@ -44,6 +45,7 @@ var downloadFiles = [
         ],
         leechersCount: 0,
         hideFile: false,
-        canDownload: true
+        canDownload: true,
+        fileLink: "http://megaicons.net/static/img/icons_sizes/316/812/512/text-x-python-icon.png"
     }
     ];
